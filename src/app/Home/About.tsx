@@ -1,4 +1,13 @@
+import { useState } from "react";
+import { CustomButton } from "../../components";
+
 export default function About() {
+  const [clicked, setClicked] = useState(false);
+
+  function handleClick(val: boolean) {
+    setClicked(val);
+  }
+
   return (
     <div className="w-3/4 m-auto py-24 flex flex-row items-start justify-between gap-60">
       <div>
@@ -10,7 +19,7 @@ export default function About() {
           able to build an awesome UI, application for the web. Has 2+ years of
           experience to Coding.
         </p>
-        <button className="mt-7 block py-2 px-4 btn">Ongoing Projects</button>
+        <CustomButton text="Ongoing Projects" handleClick={handleClick} />
       </div>
       <div>
         <h2 className="font-medium text-lg">Contact</h2>
@@ -19,6 +28,17 @@ export default function About() {
           <p className="leading-loose">+63 9268339430</p>
         </div>
       </div>
+      {clicked && (
+        <div className="fixed top-0 left-0 w-full h-full z-10">
+          <div
+            className="bg-white w-full h-full opacity-50 z-0"
+            onClick={() => setClicked(false)}
+          />
+          <div className="bg-white w-1/2 h-1/2 fixed position-center shadow-xl z-10">
+            Test
+          </div>
+        </div>
+      )}
     </div>
   );
 }

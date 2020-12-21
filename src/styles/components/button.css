@@ -3,5 +3,9 @@
 }
 
 .btn:hover {
-  @apply hover:border-transparent;
+  @apply border-transparent;
+}
+
+.btn:active {
+  @apply border-gray-600 !important;
 }
