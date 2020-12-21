@@ -5,7 +5,7 @@ const svg = "text-gray-800 w-5 h-5 object-cover";
 export default function Footer() {
   return (
     <div className="w-3/4 m-auto flex flex-row items-center justify-between py-10">
-      <p>Portfolio, Made by Kevin Nacario</p>
+      <p>&copy; Portfolio, Made by Kevin Nacario</p>
       <ul className="flex flex-row gap-5">
         <li>
           <Link to="https://www.facebook.com/notkev1n/">
