@@ -10,6 +10,7 @@ export default function AppRoutes() {
         <AnimatePresence exitBeforeEnter>
           <Switch location={location} key={location.pathname}>
             <Route path={RoutePattern.Home} component={Home} />
+            <Route path="*">Page not found</Route>
           </Switch>
         </AnimatePresence>
       )}

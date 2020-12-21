@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { CustomButton } from "../../components";
+import PopupOngoingProjects from "./Popup";
 
 export default function About() {
   const [clicked, setClicked] = useState(false);
@@ -19,7 +20,11 @@ export default function About() {
           able to build an awesome UI, application for the web. Has 2+ years of
           experience to Coding.
         </p>
-        <CustomButton text="Ongoing Projects" handleClick={handleClick} />
+        <div className="mt-7 ">
+          <CustomButton handleClick={handleClick}>
+            Ongoing Projects
+          </CustomButton>
+        </div>
       </div>
       <div>
         <h2 className="font-medium text-lg">Contact</h2>
@@ -28,17 +33,7 @@ export default function About() {
           <p className="leading-loose">+63 9268339430</p>
         </div>
       </div>
-      {clicked && (
-        <div className="fixed top-0 left-0 w-full h-full z-10">
-          <div
-            className="bg-white w-full h-full opacity-50 z-0"
-            onClick={() => setClicked(false)}
-          />
-          <div className="bg-white w-1/2 h-1/2 fixed position-center shadow-xl z-10">
-            Test
-          </div>
-        </div>
-      )}
+      {clicked && <PopupOngoingProjects setClicked={setClicked} />}
     </div>
   );
 }

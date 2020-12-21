@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
-import { useState } from "react";
-import { transition } from "./Work";
-import Audio1 from "./assets/audio/Toto.mp3";
+import { useEffect, useRef, useState } from "react";
+import { transition } from "../Work";
+import Audio1 from "../assets/audio/Toto.mp3";
 
 const animate = {
   whileHover: {
@@ -10,11 +10,28 @@ const animate = {
   transition,
 };
 
-export default function Audio() {
+export default function AudioIntro() {
   const [play, set] = useState(false);
+  const audio = useRef<any>(null);
+  const [dur, setDur] = useState(0);
+  const [currentTime, setCurrentTime] = useState(0);
+
+  useEffect(() => {
+    if (play) {
+      audio.current.play();
+    } else {
+      audio.current.pause();
+    }
+  }, [play]);
+
+  function handleProgress(e: any) {
+    let compute = (e.target.value * dur) / 100;
+    setCurrentTime(compute);
+    audio.current.currentTime = compute;
+  }
 
   return (
-    <div>
+    <div className="flex flex-row items-center">
       {play ? (
         <motion.svg
           {...animate}
@@ -56,13 +73,24 @@ export default function Audio() {
           />
         </motion.svg>
       )}
-      <div className="absolute">
-        {play && (
-          <audio autoPlay>
-            <source src={Audio1} type="audio/mpeg" />
-          </audio>
-        )}
-      </div>
+      <audio
+        ref={audio}
+        src={Audio1}
+        onTimeUpdate={(e: any) => setCurrentTime(e.target.currentTime)}
+        onCanPlay={(e: any) => setDur(e.target.duration)}
+        preload="true"
+      />
+      {play && (
+        <div className="absolute ml-20">
+          <input
+            className="bg-gray-300"
+            type="range"
+            onChange={handleProgress}
+            value={dur ? (currentTime * 100) / dur : 0}
+            name="progressBar"
+          />
+        </div>
+      )}
     </div>
   );
 }

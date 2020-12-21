@@ -2,14 +2,14 @@ enum Types {
   Submit = "submit",
 }
 interface ButtonProps {
-  text: string;
   submit?: boolean;
   handleClick?: (e: boolean) => void;
+  children: any;
 }
 export default function CustomButton({
-  text,
   submit,
   handleClick,
+  children,
 }: ButtonProps) {
   function onClick() {
     if (!handleClick) return;
@@ -20,9 +20,9 @@ export default function CustomButton({
     <button
       onClick={onClick}
       type={submit ? Types.Submit : undefined}
-      className="mt-7 block py-2 px-4 btn"
+      className="block py-2 px-4 btn"
     >
-      {text}
+      {children}
     </button>
   );
 }
