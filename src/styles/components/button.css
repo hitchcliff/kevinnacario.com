@@ -1,0 +1,7 @@
+.btn {
+  @apply border border-gray-600 rounded-2xl font-light tracking-wider outline-none focus transition-all;
+}
+
+.btn:hover {
+  @apply hover:border-transparent;
+}

@@ -1,0 +1,3 @@
+.focus:focus {
+  @apply focus:border-green-200 focus:outline-none;
+}

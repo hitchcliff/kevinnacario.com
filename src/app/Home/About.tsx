@@ -10,6 +10,7 @@ export default function About() {
           able to build an awesome UI, application for the web. Has 2+ years of
           experience to Coding.
         </p>
+        <button className="mt-7 block py-2 px-4 btn">Ongoing Projects</button>
       </div>
       <div>
         <h2 className="font-medium text-lg">Contact</h2>
