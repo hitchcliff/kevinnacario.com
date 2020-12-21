@@ -2,6 +2,27 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { CustomButton } from '../../components';
 import { RoutePattern } from '../../routes/RoutePattern';
+import { motion } from 'framer-motion';
+import { transition } from '../Home/Work';
+
+const animation = {
+  initial: {
+    height: '0%',
+    opacity: 0,
+  },
+  animate: {
+    height: 'auto',
+    opacity: 1,
+  },
+  exit: {
+    height: '0%',
+  },
+  transition,
+};
+
+const animationTwo = {
+  ...animation,
+};
 
 export default function Small() {
   const [toggle, set] = useState(false);
@@ -30,19 +51,20 @@ export default function Small() {
           )}
         </div>
       </div>
-      <div className="absolute bg-white z-10 w-1/2 shadow p-5 right-0 top-14">
-        <ul className="flex flex-col gap-2 items-center justify-center">
-          <li>
+      {toggle && (
+        <motion.div {...animation} className="absolute bg-white z-10 w-1/2 shadow p-5 right-0 top-14">
+          <motion.ul
+            initial={{ transform: 'translateY(-100%)', opacity: 0 }}
+            animate={{ transform: 'translateY(0%)', opacity: 1 }}
+            transition={transition}
+            className="flex flex-col gap-2 items-center justify-center"
+          >
             <Link to={RoutePattern.Home}>Home</Link>
-          </li>
-          <li>
             <Link to={RoutePattern.About}>About</Link>
-          </li>
-          <li>
             <Link to={RoutePattern.Portfolio}>Portfolio</Link>
-          </li>
-        </ul>
-      </div>
+          </motion.ul>
+        </motion.div>
+      )}
     </div>
   );
 }

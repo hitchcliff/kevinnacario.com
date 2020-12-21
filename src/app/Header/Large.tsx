@@ -12,15 +12,9 @@ export default function Large() {
         </Link>
       </div>
       <ul className="flex flex-row gap-10 items-center">
-        <li>
-          <Link to={RoutePattern.Home}>Home</Link>
-        </li>
-        <li>
-          <Link to={RoutePattern.About}>About</Link>
-        </li>
-        <li>
-          <Link to={RoutePattern.Portfolio}>Portfolio</Link>
-        </li>
+        <Link to={RoutePattern.Home}>Home</Link>
+        <Link to={RoutePattern.About}>About</Link>
+        <Link to={RoutePattern.Portfolio}>Portfolio</Link>
       </ul>
       <div>
         <CustomButton>Résumé</CustomButton>

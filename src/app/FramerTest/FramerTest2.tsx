@@ -1,6 +1,6 @@
-import Image from "./assets/1.jpg";
-import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
+import Image from './assets/1.jpg';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 const transition = {
   duration: 0.6,
@@ -9,20 +9,20 @@ const transition = {
 
 const image = {
   initial: {
-    y: "-10%",
-    width: "25%",
-    height: "25%",
+    y: '-10%',
+    width: '25%',
+    height: '25%',
   },
   animate: {
     y: 0,
-    width: "100%",
-    height: "100%",
+    width: '100%',
+    height: '100%',
     transition: { delay: 0.2, ...transition },
   },
   exit: {
-    y: "-10%",
-    width: "25%",
-    height: "25%",
+    y: '-10%',
+    width: '25%',
+    height: '25%',
   },
 };
 
@@ -39,20 +39,12 @@ export default function FramerTest2() {
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque, quo!
       </motion.div>
       <motion.div variants={image}>
-        <motion.img
-          variants={animate}
-          className="object-cover"
-          src={Image}
-          alt="Sample image"
-        />
+        <motion.img variants={animate} className="object-cover" src={Image} alt="Sample image" />
       </motion.div>
       <motion.p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit
-        voluptatibus corrupti minima ratione, quod expedita, ea fugiat cum
-        accusamus quam accusantium, voluptates veniam totam atque sunt officia
-        adipisci dolor laborum eos eius asperiores. Optio soluta, sapiente eaque
-        aperiam sint labore suscipit asperiores corporis laborum, obcaecati hic,
-        officia consequuntur eius eveniet.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit voluptatibus corrupti minima ratione, quod expedita, ea fugiat cum
+        accusamus quam accusantium, voluptates veniam totam atque sunt officia adipisci dolor laborum eos eius asperiores. Optio soluta, sapiente
+        eaque aperiam sint labore suscipit asperiores corporis laborum, obcaecati hic, officia consequuntur eius eveniet.
       </motion.p>
       <Link to="/framer">Go back to framer</Link>
     </motion.div>
