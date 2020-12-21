@@ -1,0 +1,12 @@
+.masonry {
+  column-count: 3;
+}
+
+.masonry-child {
+  break-inside: avoid-column;
+  margin-top: 15px;
+}
+
+.masonry-child:first-child {
+  margin-top: 0px;
+}

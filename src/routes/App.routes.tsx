@@ -1,15 +1,18 @@
-import { Suspense } from "react";
+import { AnimatePresence } from "framer-motion";
 import { Route, Switch } from "react-router-dom";
-import { FramerTest } from "../app/index";
-import { Loading } from "../components";
+import { RoutePattern } from "./RoutePattern";
+import { Home } from "../app/index";
 
 export default function AppRoutes() {
   return (
-    <Suspense fallback={<Loading />}>
-      <Switch>
-        <Route exact path="/framer" component={FramerTest} />
-        <Route path="*">Page not found</Route>
-      </Switch>
-    </Suspense>
+    <Route
+      render={({ location }: any) => (
+        <AnimatePresence exitBeforeEnter>
+          <Switch location={location} key={location.pathname}>
+            <Route path={RoutePattern.Home} component={Home} />
+          </Switch>
+        </AnimatePresence>
+      )}
+    />
   );
 }
