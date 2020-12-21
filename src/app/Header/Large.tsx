@@ -1,6 +1,6 @@
-import { Link } from "react-router-dom";
-import { CustomButton } from "../../components";
-import { RoutePattern } from "../../routes/RoutePattern";
+import { Link } from 'react-router-dom';
+import { CustomButton } from '../../components';
+import { RoutePattern } from '../../routes/RoutePattern';
 export default function Large() {
   return (
     <div className="hidden sm:flex flex-row justify-between items-center">

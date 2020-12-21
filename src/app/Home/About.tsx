@@ -1,7 +1,7 @@
-import { useState } from "react";
-import { CustomButton } from "../../components";
-import PopupOngoingProjects from "./Popup";
-import { motion } from "framer-motion";
+import { useState } from 'react';
+import { CustomButton } from '../../components';
+import PopupOngoingProjects from './Popup';
+import { motion } from 'framer-motion';
 
 export default function About() {
   const [clicked, setClicked] = useState(false);
@@ -15,16 +15,12 @@ export default function About() {
       <div>
         <h2 className="font-medium text-lg">About</h2>
         <p className="mt-10 leading-loose">
-          I am seeking a position either Frontend or Jr. Fullstack Developer in
-          a reputable organization. I build websites using React, my interest is
-          to build fully RTL black box tests to Fullstack applications. I was
-          able to build an awesome UI, application for the web. Has 2+ years of
+          I am seeking a position either Frontend or Jr. Fullstack Developer in a reputable organization. I build websites using React, my interest is
+          to build fully RTL black box tests to Fullstack applications. I was able to build an awesome UI, application for the web. Has 2+ years of
           experience to Coding.
         </p>
         <div className="mt-7 ">
-          <CustomButton handleClick={handleClick}>
-            Ongoing Projects
-          </CustomButton>
+          <CustomButton handleClick={handleClick}>Ongoing Projects</CustomButton>
         </div>
       </div>
       <div>

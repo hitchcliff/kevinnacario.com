@@ -1,8 +1,10 @@
-import { Link } from "react-router-dom";
-import { CustomButton } from "../../components";
-import { RoutePattern } from "../../routes/RoutePattern";
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { CustomButton } from '../../components';
+import { RoutePattern } from '../../routes/RoutePattern';
 
 export default function Small() {
+  const [toggle, set] = useState(false);
   return (
     <div className="relative block sm:hidden">
       <div className="flex flex-row items-center gap-2">
@@ -16,21 +18,16 @@ export default function Small() {
         <div className="ml-auto">
           <CustomButton>Résumé</CustomButton>
         </div>
-        <div>
-          <svg
-            className="w-5 h-5"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M4 6h16M4 12h16M4 18h16"
-            />
-          </svg>
+        <div onClick={() => set(!toggle)}>
+          {toggle ? (
+            <svg className="w-5 h5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          ) : (
+            <svg className="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          )}
         </div>
       </div>
       <div className="absolute bg-white z-10 w-1/2 shadow p-5 right-0 top-14">
