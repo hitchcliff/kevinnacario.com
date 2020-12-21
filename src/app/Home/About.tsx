@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { CustomButton } from "../../components";
 import PopupOngoingProjects from "./Popup";
+import { motion } from "framer-motion";
 
 export default function About() {
   const [clicked, setClicked] = useState(false);
@@ -10,7 +11,7 @@ export default function About() {
   }
 
   return (
-    <div className="w-3/4 m-auto py-24 flex flex-row items-start justify-between gap-60">
+    <motion.div className="w-3/4 m-auto py-24 flex flex-row items-start justify-between gap-60">
       <div>
         <h2 className="font-medium text-lg">About</h2>
         <p className="mt-10 leading-loose">
@@ -34,6 +35,6 @@ export default function About() {
         </div>
       </div>
       {clicked && <PopupOngoingProjects setClicked={setClicked} />}
-    </div>
+    </motion.div>
   );
 }
