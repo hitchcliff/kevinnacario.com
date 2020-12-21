@@ -11,7 +11,7 @@ export default function About() {
   }
 
   return (
-    <motion.div className="w-3/4 m-auto py-24 flex flex-row items-start justify-between gap-60">
+    <motion.div className="w-3/4 m-auto py-24 flex gap-10 flex-row flex-wrap items-start justify-between sm:flex-nowrap lg:gap-60">
       <div>
         <h2 className="font-medium text-lg">About</h2>
         <p className="mt-10 leading-loose">

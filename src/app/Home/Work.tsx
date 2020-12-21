@@ -21,7 +21,7 @@ const animate = {
 
 export default function Work() {
   return (
-    <div className="grid grid-cols-3 gap-5 w-3/4 m-auto mt-16">
+    <div className="grid  gap-5 w-3/4 m-auto mt-16 md:grid-cols-3">
       {Portfolio.map((item, idx) => (
         <div className="" key={idx}>
           <div className="overflow-hidden">
