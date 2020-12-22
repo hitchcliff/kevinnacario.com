@@ -32,7 +32,7 @@ const animationTwo = {
 export default function PopupOngoingProjects({ setClicked }: PopupOngoingProjectsProps) {
   return (
     <motion.div {...animationOne} className="fixed w-full h-full z-10">
-      <div className="bg-white w-full h-full opacity-50 z-0" onClick={() => setClicked(false)} />
+      <div className="bg-white w-full h-full opacity-80 z-0" onClick={() => setClicked(false)} />
       <motion.div {...animationTwo} className="bg-white fixed position-center shadow-xl z-10">
         <span onClick={() => setClicked(false)}>close</span>
       </motion.div>
