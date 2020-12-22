@@ -16,7 +16,7 @@ export const stagger = {
 
 export const slideUpStagger = {
   initial: {
-    y: 400,
+    y: 300,
     opacity: 0,
     scale: 1.2,
   },
@@ -25,5 +25,10 @@ export const slideUpStagger = {
     opacity: 1,
     scale: 1,
     transition: { ...transition, duration: 1 },
+  },
+  exit: {
+    y: -50,
+    opacity: 0,
+    transition: { ...transition, duration: 1, delay: 0.4 },
   },
 };

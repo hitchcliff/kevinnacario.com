@@ -5,17 +5,27 @@ import { Link } from 'react-router-dom';
 import { RoutePattern } from '../../routes/RoutePattern';
 import { motion } from 'framer-motion';
 import { slideUpFrameAnim, slideUpV2FrameAnim } from '../../components/animation/slide';
+import { useEffect, useState } from 'react';
+import { curtainFromLeftToRight } from '../../components/animation/curtain';
 
 export default function Home() {
+  const [load, setLoad] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoad(false);
+    }, 1500);
+  }, []);
+
   return (
     <div className="flex flex-col min-h-screen relative">
+      {load && <motion.div {...curtainFromLeftToRight} className="fixed w-full h-full z-50 bg-white"></motion.div>}
       <div className="flex flex-col px-10 py-10 md:px-56">
-        <motion.h1 {...slideUpFrameAnim} className="m-auto font-light leading-snug  w-full text-lg text-center md:text-2xl lg:w-1/2">
+        <motion.h1 {...slideUpV2FrameAnim} className="m-auto font-light leading-snug  w-full text-lg text-center md:text-2xl lg:w-1/2">
           I'm Kevin Nacario, a Frontend Developer and Jr. Fullstack Developer from Philippines. I build frontend applications and has 2+ years of
           coding experience in web development.
         </motion.h1>
-        <motion.div {...slideUpV2FrameAnim} className="w-10 h-1 mt-10  m-auto  bg-gray-300 transform rotate-90"></motion.div>
-        <motion.div {...slideUpFrameAnim} className="m-auto p-10 flex flex-row items-center">
+        <motion.div {...slideUpV2FrameAnim} className="m-auto p-10 flex flex-row items-center">
           <Link to={RoutePattern.Portfolio}>
             <p className="inline-block focus">See my works</p>
           </Link>
