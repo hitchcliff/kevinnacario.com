@@ -24,7 +24,7 @@ const hover = {
 export default function Work() {
   return (
     <motion.div initial="initial" animate="animate" exit="exit">
-      <motion.div variants={stagger} className="grid  gap-5 w-3/4 m-auto mt-16 md:grid-cols-3">
+      <motion.div variants={stagger} className="grid gap-5 w-3/4 m-auto mt-16 md:grid-cols-3">
         {Portfolio.map((item, idx) => (
           <motion.div variants={slideUpStagger} key={idx}>
             <div className="overflow-hidden">

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { CustomButton } from '../../components';
 import PopupOngoingProjects from './Popup';
-import { motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import { slideUpV2FrameAnim } from '../../components/animation/slide';
 
 export default function About() {
@@ -34,7 +34,7 @@ export default function About() {
           <p className="leading-loose">+63 9268339430</p>
         </div>
       </div>
-      {clicked && <PopupOngoingProjects setClicked={setClicked} />}
+      <AnimatePresence exitBeforeEnter>{clicked && <PopupOngoingProjects setClicked={setClicked} />}</AnimatePresence>
     </motion.div>
   );
 }

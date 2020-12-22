@@ -1,6 +1,6 @@
-import { AnimatePresence } from "framer-motion";
-import { Route, Switch } from "react-router-dom";
-import { FramerTest, FramerTest2 } from "../app/index";
+import { AnimatePresence } from 'framer-motion';
+import { Route, Switch } from 'react-router-dom';
+import { FramerTest, FramerTest2 } from '../app/index';
 
 export default function FramerRoutes() {
   return (

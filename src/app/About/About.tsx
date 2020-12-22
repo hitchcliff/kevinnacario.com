@@ -1,9 +1,22 @@
+import { motion } from 'framer-motion';
 import { CustomButton } from '../../components';
 import AboutImage from './assets/about-hero1.png';
 
+import ReactImg from './assets/react.png';
+import ReduxImg from './assets/redux.png';
+import TsImg from './assets/ts.png';
+import JestImg from './assets/jest.png';
+import Skills from './Skills';
+
+const test = {
+  exit: {
+    opacity: 0,
+  },
+};
+
 export default function About() {
   return (
-    <div className="w-full min-h-screen">
+    <motion.div {...test} className="w-full min-h-screen">
       <div className="flex flex-row justify-between items-center bg-gray-100">
         <div className="w-1/2 h-full ml-auto md:px-40">
           <h1 className="font-light text-6xl">About me</h1>
@@ -18,9 +31,7 @@ export default function About() {
           <img className="w-full object-cover" src={AboutImage} alt="insperity.com" />
         </div>
       </div>
-      <div>
-        <h2>Who I am</h2>
-      </div>
-    </div>
+      <Skills />
+    </motion.div>
   );
 }

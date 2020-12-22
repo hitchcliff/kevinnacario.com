@@ -21,19 +21,19 @@ export const slideUpFrameAnim = {
 
 export const slideUpV2FrameAnim = {
   initial: {
-    top: 100,
+    y: 100,
     opacity: 0,
-    scale: 1.2,
+    scale: 1.1,
   },
   animate: {
-    top: 0,
+    y: 0,
     opacity: 1,
     scale: 1,
   },
   exit: {
-    bottom: 50,
+    y: 50,
     opacity: 0,
-    scale: 1.2,
+    scale: 0.6,
     transition: {
       delay: 0.2,
     },
@@ -41,5 +41,25 @@ export const slideUpV2FrameAnim = {
   transition: {
     duration: 1.6,
     ease: [0.43, 0.13, 0.23, 0.96],
+  },
+};
+
+export const slideDownFrameAnim = {
+  initial: {
+    y: -100,
+    opacity: 0,
+  },
+  animate: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      ...transition,
+      duration: 1.8,
+    },
+  },
+  exit: {
+    y: -100,
+    scale: 0,
+    opacity: 0,
   },
 };
