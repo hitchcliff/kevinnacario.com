@@ -1,24 +1,22 @@
+import { transition } from './stagger';
+
 export const slideUpFrameAnim = {
   initial: {
-    marginTop: -100,
+    y: -100,
     opacity: 0,
   },
   animate: {
-    marginTop: 0,
+    y: 0,
     opacity: 1,
   },
   exit: {
-    marginTop: '50px',
+    y: 50,
     opacity: 0,
     transition: {
       delay: 0.2,
     },
   },
-  transition: {
-    delay: 1,
-    duration: 1.6,
-    ease: [0.43, 0.13, 0.23, 0.96],
-  },
+  transition,
 };
 
 export const slideUpV2FrameAnim = {
@@ -41,7 +39,6 @@ export const slideUpV2FrameAnim = {
     },
   },
   transition: {
-    delay: 1,
     duration: 1.6,
     ease: [0.43, 0.13, 0.23, 0.96],
   },
