@@ -7,6 +7,7 @@ import ReduxImg from './assets/redux.png';
 import TsImg from './assets/ts.png';
 import JestImg from './assets/jest.png';
 import Skills from './Skills';
+import Me from './Me';
 
 const test = {
   exit: {
@@ -32,6 +33,7 @@ export default function About() {
         </div>
       </div>
       <Skills />
+      <Me />
     </motion.div>
   );
 }
