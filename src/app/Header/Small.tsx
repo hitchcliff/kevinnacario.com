@@ -20,10 +20,6 @@ const animation = {
   transition,
 };
 
-const animationTwo = {
-  ...animation,
-};
-
 export default function Small() {
   const [toggle, set] = useState(false);
   return (

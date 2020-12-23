@@ -27,8 +27,41 @@ export const slideUpStagger = {
     transition: { ...transition, duration: 1 },
   },
   exit: {
-    y: 40,
+    y: 300,
     opacity: 0,
-    transition: { ...transition, duration: 1, delay: 0.4 },
+    transition: { ...transition, duration: 1 },
+  },
+};
+
+export const testStagger = {
+  hidden: {
+    transition: {
+      delayChildren: 0.6,
+      staggerChildren: 0.1,
+      staggerDirection: -1,
+    },
+  },
+  visible: {
+    transition: {
+      delayChildren: 0.6,
+      staggerChildren: 0.1,
+    },
+  },
+};
+
+export const testSlideUpStagger = {
+  hidden: {
+    y: 0,
+    opacity: 0,
+    transition: {
+      y: { stiffness: 10 },
+    },
+  },
+  visible: {
+    y: 50,
+    opacity: 1,
+    transition: {
+      y: { stiffness: 1000, velocity: -100 },
+    },
   },
 };

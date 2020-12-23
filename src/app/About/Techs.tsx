@@ -1,18 +1,20 @@
 import { motion } from 'framer-motion';
-import { slideUpStagger, stagger } from '../../components/animation/stagger';
+import { slideUpStagger, stagger, testSlideUpStagger, testStagger } from '../../components/animation/stagger';
 
 interface TechsProps {
   data: any;
+  clicked: boolean;
 }
 
-export default function Techs({ data }: TechsProps) {
+export default function Techs({ data, clicked }: TechsProps) {
+  console.log(clicked);
   return (
-    <motion.div initial="initial" animate="animate" exit="exit" className="mx-auto">
-      <motion.ul className="flex flex-row flex-wrap gap-5" variants={stagger}>
+    <motion.div initial={false} animate={clicked ? 'visible' : 'hidden'} className="absolute">
+      <motion.ul className="flex flex-row flex-wrap gap-5" variants={testStagger}>
         {data.map((item: any, idx: number) => (
-          <motion.li className="flex flex-row items-center" key={idx} variants={slideUpStagger}>
+          <motion.li key={idx} variants={testSlideUpStagger}>
             <div>
-              <span className="font-semibold uppercase border rounded-full border-gray-600 py-2 px-4">{item.name}</span>
+              <span className="font-semibold uppercase border rounded-full border-gray-600 py-2 px-4 inline-block">{item.name}</span>
             </div>
           </motion.li>
         ))}

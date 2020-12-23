@@ -3,7 +3,6 @@ import { useState } from 'react';
 import Heading from './Heading';
 import Techs from './Techs';
 import { Frontend, Backend, Principles, Others } from './Data';
-import { slideUpStagger, stagger } from '../../components/animation/stagger';
 import { slideDownFrameAnim, slideUpV2FrameAnim } from '../../components/animation/slide';
 
 const svg = 'w-8 h-8 m-auto font-light text-gray-500';
@@ -47,8 +46,8 @@ export default function Skills() {
   const [currentIdx, setCurrentIdx] = useState<number>(0);
 
   return (
-    <div className="py-28 flex flex-col sm:flex-nowrap md:px-40">
-      <div className="m-auto">
+    <div className="relative py-28 flex flex-row flex-wrap md:gap-40 md:flex-nowrap md:px-40">
+      <div className="w-1/2">
         <Heading num="1">Technical Skills</Heading>
         <motion.div className="mt-10 flex flex-row justify-start items-center gap-5" {...slideDownFrameAnim}>
           {technical.map((item, idx) => (
@@ -58,17 +57,27 @@ export default function Skills() {
             </button>
           ))}
         </motion.div>
+        <motion.div className="mt-16 mb-24" {...slideUpV2FrameAnim}>
+          <p>
+            Coding for 12+ hours a day will help my mind to think constantly, besides it takes more than that to be a good programmer. It's not crazy,
+            this is how it works.
+          </p>
+        </motion.div>
       </div>
-      <motion.div className="w-1/4 mx-auto mt-16 mb-24" {...slideUpV2FrameAnim}>
-        <p>
-          Coding for 12+ hours a day will help my mind to think constantly, besides it takes more than that to be a good programmer. It's not crazy,
-          this is how it works.
-        </p>
-      </motion.div>
-      <AnimatePresence exitBeforeEnter>{currentIdx === 0 && <Techs data={Frontend} />}</AnimatePresence>
-      <AnimatePresence exitBeforeEnter>{currentIdx === 1 && <Techs data={Backend} />}</AnimatePresence>
-      <AnimatePresence exitBeforeEnter>{currentIdx === 2 && <Techs data={Principles} />}</AnimatePresence>
-      <AnimatePresence exitBeforeEnter>{currentIdx === 3 && <Techs data={Others} />}</AnimatePresence>
+      <div className="w-1/2 relative" {...slideUpV2FrameAnim}>
+        <AnimatePresence exitBeforeEnter>
+          <Techs clicked={currentIdx === 0 ? true : false} data={Frontend} />
+        </AnimatePresence>
+        <AnimatePresence exitBeforeEnter>
+          <Techs clicked={currentIdx === 1 ? true : false} data={Backend} />
+        </AnimatePresence>
+        <AnimatePresence exitBeforeEnter>
+          <Techs clicked={currentIdx === 2 ? true : false} data={Principles} />
+        </AnimatePresence>
+        <AnimatePresence exitBeforeEnter>
+          <Techs clicked={currentIdx === 3 ? true : false} data={Others} />
+        </AnimatePresence>
+      </div>
     </div>
   );
 }

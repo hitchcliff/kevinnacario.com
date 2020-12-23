@@ -93,10 +93,10 @@ export const Principles = [
     name: 'Mobile First',
   },
   {
-    name: 'Progressize Web Apps',
+    name: 'PWA',
   },
   {
-    name: 'SOLID Principles',
+    name: 'SOLID',
   },
   {
     name: 'OOP',
