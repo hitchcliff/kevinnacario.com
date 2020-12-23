@@ -1,8 +1,10 @@
-import { AnimatePresence } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import { useState } from 'react';
 import Heading from './Heading';
 import Techs from './Techs';
 import { Frontend, Backend, Principles, Others } from './Data';
+import { slideUpStagger, stagger } from '../../components/animation/stagger';
+import { slideDownFrameAnim, slideUpV2FrameAnim } from '../../components/animation/slide';
 
 const svg = 'w-8 h-8 m-auto font-light text-gray-500';
 
@@ -48,21 +50,21 @@ export default function Skills() {
     <div className="py-28 flex flex-col sm:flex-nowrap md:px-40">
       <div className="m-auto">
         <Heading num="1">Technical Skills</Heading>
-        <div className="mt-10 flex flex-row justify-start items-center gap-5">
+        <motion.div className="mt-10 flex flex-row justify-start items-center gap-5" {...slideDownFrameAnim}>
           {technical.map((item, idx) => (
             <button className="shadow-xl text-center py-3 px-2 rounded-lg " key={idx} onClick={() => setCurrentIdx(idx)}>
               <span className="block">{item.svg}</span>
               <p className="tracking-wider text-sm text-gray-500 font-medium mt-2">{item.name}</p>
             </button>
           ))}
-        </div>
+        </motion.div>
       </div>
-      <div className="w-1/4 mx-auto mt-16 mb-24">
+      <motion.div className="w-1/4 mx-auto mt-16 mb-24" {...slideUpV2FrameAnim}>
         <p>
           Coding for 12+ hours a day will help my mind to think constantly, besides it takes more than that to be a good programmer. It's not crazy,
           this is how it works.
         </p>
-      </div>
+      </motion.div>
       <AnimatePresence exitBeforeEnter>{currentIdx === 0 && <Techs data={Frontend} />}</AnimatePresence>
       <AnimatePresence exitBeforeEnter>{currentIdx === 1 && <Techs data={Backend} />}</AnimatePresence>
       <AnimatePresence exitBeforeEnter>{currentIdx === 2 && <Techs data={Principles} />}</AnimatePresence>

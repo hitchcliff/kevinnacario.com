@@ -1,17 +1,12 @@
 import { motion } from 'framer-motion';
 import { CustomButton } from '../../components';
 import AboutImage from './assets/about-hero1.png';
-
-import ReactImg from './assets/react.png';
-import ReduxImg from './assets/redux.png';
-import TsImg from './assets/ts.png';
-import JestImg from './assets/jest.png';
 import Skills from './Skills';
 import Me from './Me';
 
 const test = {
   exit: {
-    opacity: 0,
+    opacity: 1,
   },
 };
 

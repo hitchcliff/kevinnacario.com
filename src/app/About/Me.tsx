@@ -1,9 +1,11 @@
+import { motion } from 'framer-motion';
 import { CustomButton } from '../../components';
+import { slideUpV2FrameAnim } from '../../components/animation/slide';
 import Heading from './Heading';
 
 export default function Me() {
   return (
-    <div className="py-28 md:px-40">
+    <motion.div className="py-28 md:px-40" {...slideUpV2FrameAnim}>
       <div className="flex flex-row flex-wrap md:flex-nowrap md:gap-40">
         <div className="w-1/2 shadow-lg">video</div>
         <div className="w-1/2">
@@ -18,6 +20,6 @@ export default function Me() {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }

@@ -4,9 +4,7 @@ import AudioIntro from './audio/AudioIntro';
 import { Link } from 'react-router-dom';
 import { RoutePattern } from '../../routes/RoutePattern';
 import { motion } from 'framer-motion';
-import { slideUpFrameAnim, slideUpV2FrameAnim } from '../../components/animation/slide';
-import { useEffect, useState } from 'react';
-import { curtainFromLeftToRight } from '../../components/animation/curtain';
+import { slideUpV2FrameAnim } from '../../components/animation/slide';
 
 export default function Home() {
   return (
