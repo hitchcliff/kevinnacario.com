@@ -3,7 +3,7 @@ import { useState } from 'react';
 import Heading from './Heading';
 import Techs from './Techs';
 import { Frontend, Backend, Principles, Others } from './Data';
-import { slideDownFrameAnim, slideUpV2FrameAnim } from '../../components/animation/slide';
+import { slideDownFrameAnim, slideLeft, slideUpFrameAnim, slideUpV2FrameAnim } from '../../components/animation/slide';
 
 const svg = 'w-8 h-8 m-auto font-light text-gray-500';
 
@@ -64,7 +64,7 @@ export default function Skills() {
           </p>
         </motion.div>
       </div>
-      <div className="w-1/2 relative" {...slideUpV2FrameAnim}>
+      <motion.div className="w-1/2 relative" {...slideUpFrameAnim}>
         <AnimatePresence exitBeforeEnter>
           <Techs clicked={currentIdx === 0 ? true : false} data={Frontend} />
         </AnimatePresence>
@@ -77,7 +77,7 @@ export default function Skills() {
         <AnimatePresence exitBeforeEnter>
           <Techs clicked={currentIdx === 3 ? true : false} data={Others} />
         </AnimatePresence>
-      </div>
+      </motion.div>
     </div>
   );
 }

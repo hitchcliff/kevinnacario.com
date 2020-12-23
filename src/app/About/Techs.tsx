@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { slideUpStagger, stagger, testSlideUpStagger, testStagger } from '../../components/animation/stagger';
+import { testSlideUpStagger, testStagger } from '../../components/animation/stagger';
 
 interface TechsProps {
   data: any;
