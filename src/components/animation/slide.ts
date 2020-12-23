@@ -59,3 +59,39 @@ export const slideDownFrameAnim = {
     opacity: 0,
   },
 };
+
+export const slideLeft = {
+  initial: {
+    x: 2000,
+  },
+  animate: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      ...transition,
+      duration: 1.8,
+    },
+  },
+  exit: {
+    x: 2000,
+    opacity: 0,
+  },
+};
+
+export const slideRight = {
+  initial: {
+    x: -2000,
+  },
+  animate: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      ...transition,
+      duration: 1.8,
+    },
+  },
+  exit: {
+    x: -2000,
+    opacity: 0,
+  },
+};
