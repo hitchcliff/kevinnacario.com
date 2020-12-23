@@ -27,8 +27,8 @@ export const slideUpStagger = {
     transition: { ...transition, duration: 1 },
   },
   exit: {
-    y: -50,
     opacity: 0,
+    scale: 0.5,
     transition: { ...transition, duration: 1, delay: 0.4 },
   },
 };

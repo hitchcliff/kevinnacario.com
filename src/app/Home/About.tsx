@@ -1,6 +1,5 @@
 import { useState } from 'react';
-import { CustomButton } from '../../components';
-import PopupOngoingProjects from './Popup';
+import { CustomButton, Popup } from '../../components';
 import { AnimatePresence, motion } from 'framer-motion';
 import { slideUpV2FrameAnim } from '../../components/animation/slide';
 
@@ -34,7 +33,7 @@ export default function About() {
           <p className="leading-loose">+63 9268339430</p>
         </div>
       </div>
-      <AnimatePresence exitBeforeEnter>{clicked && <PopupOngoingProjects setClicked={setClicked} />}</AnimatePresence>
+      <AnimatePresence exitBeforeEnter>{clicked && <Popup sensor={setClicked} />}</AnimatePresence>
     </motion.div>
   );
 }
