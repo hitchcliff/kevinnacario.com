@@ -46,8 +46,8 @@ export default function Skills() {
   const [currentIdx, setCurrentIdx] = useState<number>(0);
 
   return (
-    <div className="relative py-28 flex flex-row flex-wrap md:gap-40 md:flex-nowrap md:px-40">
-      <div className="w-1/2">
+    <div className="relative px-10 py-28 flex flex-row flex-wrap md:px-40 lg:gap-40 lg:flex-nowrap ">
+      <div className="w-full lg:w-1/2">
         <Heading num="1">Technical Skills</Heading>
         <motion.div className="mt-10 flex flex-row justify-start items-center gap-5" {...slideDownFrameAnim}>
           {technical.map((item, idx) => (
@@ -57,14 +57,14 @@ export default function Skills() {
             </button>
           ))}
         </motion.div>
-        <motion.div className="mt-16 mb-24" {...slideUpV2FrameAnim}>
+        <motion.div className="mt-16 mb-0 lg:mb-24" {...slideUpV2FrameAnim}>
           <p>
             Coding for 12+ hours a day will help my mind to think constantly, besides it takes more than that to be a good programmer. It's not crazy,
             this is how it works.
           </p>
         </motion.div>
       </div>
-      <motion.div className="w-1/2 relative" {...slideUpFrameAnim}>
+      <motion.div className="relative w-full h-40 md:h-60 lg:h-auto lg:w-1/2" {...slideUpFrameAnim}>
         <AnimatePresence exitBeforeEnter>
           <Techs clicked={currentIdx === 0 ? true : false} data={Frontend} />
         </AnimatePresence>

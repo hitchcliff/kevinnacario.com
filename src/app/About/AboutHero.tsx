@@ -72,7 +72,7 @@ function Swarm({ count, mouse }: ISwarmProp) {
 }
 
 export default function AboutHero() {
-  const mouse = useRef([0, 0]);
+  const mouse = useRef([-871.5, -279.5]);
   const onMouseMove = useCallback(({ clientX: x, clientY: y }) => (mouse.current = [x - window.innerWidth / 2, y - window.innerHeight / 2]), []);
   return (
     <div style={{ width: '100%', height: '100%' }} onMouseMove={onMouseMove}>

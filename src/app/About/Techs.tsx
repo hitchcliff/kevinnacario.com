@@ -7,7 +7,6 @@ interface TechsProps {
 }
 
 export default function Techs({ data, clicked }: TechsProps) {
-  console.log(clicked);
   return (
     <motion.div initial={false} animate={clicked ? 'visible' : 'hidden'} className="absolute">
       <motion.ul className="flex flex-row flex-wrap gap-5" variants={testStagger}>
