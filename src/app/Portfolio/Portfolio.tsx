@@ -26,9 +26,9 @@ export default function Portfolio() {
           const tags = section.querySelector('#tags');
           const title = section.querySelector('#title');
           const more = section.querySelector('#more');
-          const authorImage = section.querySelector('#author-image');
           const authorInfo = section.querySelector('#author-info');
           const showcase = section.querySelector('#showcase');
+          const showcaseImage = section.querySelector('#showcase-image');
 
           // slide to right
           TweenLite.from(tags, 0.8, {
@@ -49,24 +49,40 @@ export default function Portfolio() {
             ease: Power3.easeOut,
             delay: 0.6,
           });
-          // slide to left
+          TweenLite.from(authorInfo, 0.8, {
+            opacity: 0,
+            x: -80,
+            ease: Power3.easeOut,
+            delay: 0.8,
+          });
+
+          // slide up then scale
+          TweenLite.from(showcase, 1.2, {
+            y: 80,
+            ease: Power3.easeOut,
+            delay: 0.2,
+          });
+
+          TweenLite.from(showcaseImage, 1.8, {
+            scale: 1.5,
+            ease: Power3.easeOut,
+            delay: 0.2,
+          });
         }}
         render={({ state, fullpageApi }: any) => {
           return (
             <ReactFullpage.Wrapper>
-              <AnimatePresence exitBeforeEnter initial>
-                <div className="section">
-                  <Item
-                    tags={['UI,', 'UX']}
-                    title="Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, cumque?"
-                    more="!#"
-                    author_image={AuthorImage}
-                    author_name="Kevin Nacario"
-                    author_title="Developer"
-                    showcase={Image1}
-                  />
-                </div>
-              </AnimatePresence>
+              <div className="section">
+                <Item
+                  tags={['UI,', 'UX']}
+                  title="Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, cumque?"
+                  more="!#"
+                  author_image={AuthorImage}
+                  author_name="Kevin Nacario"
+                  author_title="Developer"
+                  showcase={Image1}
+                />
+              </div>
               <div className="section">
                 <Item
                   tags={['UI,', 'UX']}
