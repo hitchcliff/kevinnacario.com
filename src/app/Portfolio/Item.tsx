@@ -1,5 +1,6 @@
 import { CustomButton } from '../../components';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 interface CardProps {
   tags: string[];

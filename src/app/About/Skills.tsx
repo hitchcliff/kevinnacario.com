@@ -46,7 +46,7 @@ export default function Skills() {
   const [currentIdx, setCurrentIdx] = useState<number>(0);
 
   return (
-    <div className="relative px-10 py-28 flex flex-row flex-wrap md:px-40 lg:gap-40 lg:flex-nowrap ">
+    <div className="relative px-10 py-28 flex flex-row flex-wrap md:px-56 lg:gap-40 lg:flex-nowrap ">
       <div className="w-full lg:w-1/2">
         <Heading num="1">Technical Skills</Heading>
         <motion.div className="mt-10 flex flex-row justify-start items-center gap-5" {...slideDownFrameAnim}>

@@ -34,6 +34,25 @@ export const curtainFromLeftToRight = {
   },
 };
 
+export const curtainFromTopToBottom = {
+  initial: {
+    top: '-100%',
+    left: 0,
+  },
+  animate: {
+    top: '100%',
+    left: 0,
+  },
+  exit: {
+    top: '-100%',
+    left: 0,
+  },
+  transition: {
+    duration: 0.6,
+    ease: [0.43, 0.13, 0.23, 0.96],
+  },
+};
+
 export const popupFrameAnimation = {
   initial: {
     width: 0,
