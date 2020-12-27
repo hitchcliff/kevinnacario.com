@@ -1,20 +1,24 @@
 import React from 'react';
 import { CustomButton } from '../../components';
 
-type TParams = { id: string };
+interface SinglePortfolioProps {
+  match: { params: { id: string } };
+}
 
-export default function SinglePortfolio({ match }: any) {
+export default function SinglePortfolio({ match }: SinglePortfolioProps) {
   console.log(match.params.id);
   return (
     <div className="flex flex-col">
-      <div className="flex flex-row flex-wrap  px:10 lg:px-56 lg:flex-nowrap min-h-screen bg-gray-100">
-        <div>
-          <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, dolore?</h1>
-          <CustomButton>Visit site</CustomButton>
+      <div className="flex flex-row flex-wrap items-center px:10 gap-10 lg:px-56 lg:flex-nowrap min-h-screen bg-gray-100">
+        <div className="w-1/2">
+          <h1 className="text-5xl font-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, dolore?</h1>
+          <div className="mt-10">
+            <CustomButton>Visit site</CustomButton>
+          </div>
         </div>
         <div>Image here</div>
       </div>
-      <div className="flex flex-row gap-12 bg-gray-200 py-24 h-1/2  px:10 lg:px-56">
+      <div className="flex flex-row gap-12 bg-gray-200 py-24 h-1/2  px:10 w-full lg:px-56">
         <div>
           <h2>Tags</h2>
           <ul className="flex flex-row flex-nowrap gap-2">
