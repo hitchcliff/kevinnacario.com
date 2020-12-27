@@ -646,6 +646,24 @@ h2 {
   line-height: 1.75rem;
 }
 
+.vertical-scrollbar::-webkit-scrollbar {
+  border-radius: 9999px;
+  height: 2.5rem;
+  opacity: 1;
+  width: 0.25rem;
+}
+
+.vertical-scrollbar:hover::-webkit-scrollbar {
+  --tw-bg-opacity: 1;
+  background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
+}
+
+.vertical-scrollbar:hover::-webkit-scrollbar-thumb {
+  --tw-bg-opacity: 1;
+  background-color: rgba(209, 213, 219, var(--tw-bg-opacity));
+  border-radius: 9999px;
+}
+
 .space-y-0 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));

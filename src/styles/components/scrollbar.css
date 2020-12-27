@@ -1,0 +1,10 @@
+.vertical-scrollbar::-webkit-scrollbar {
+  @apply w-1 h-10 rounded-full opacity-100;
+}
+
+.vertical-scrollbar:hover::-webkit-scrollbar {
+  @apply bg-white;
+}
+.vertical-scrollbar:hover::-webkit-scrollbar-thumb {
+  @apply bg-gray-300 rounded-full;
+}
