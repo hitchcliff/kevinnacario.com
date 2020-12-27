@@ -1,3 +1,4 @@
+import React from 'react';
 import { CustomButton } from '../../components';
 import AuthorImage from './assets/images/kevin.jpg';
 import Image1 from '../../assets/images/real-estate.jpg';

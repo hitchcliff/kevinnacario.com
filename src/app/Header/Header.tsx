@@ -1,3 +1,4 @@
+import React from 'react';
 import Large from './Large';
 import Small from './Small';
 import { motion } from 'framer-motion';

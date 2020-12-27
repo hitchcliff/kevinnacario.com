@@ -1,3 +1,4 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { RoutePattern } from '../../routes/RoutePattern';
 import Image1 from '../../assets/images/real-estate.jpg';

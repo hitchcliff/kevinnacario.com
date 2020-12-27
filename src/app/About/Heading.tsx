@@ -1,3 +1,4 @@
+import React from 'react';
 import { motion } from 'framer-motion';
 import { slideUpV2FrameAnim } from '../../components/animation/slide';
 

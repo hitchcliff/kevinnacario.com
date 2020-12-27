@@ -1,3 +1,4 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
 
 const svg = 'text-gray-800 w-5 h-5 object-cover';

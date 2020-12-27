@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { CustomButton, Popup } from '../../components';
 import { AnimatePresence, motion } from 'framer-motion';
 import { slideUpV2FrameAnim } from '../../components/animation/slide';

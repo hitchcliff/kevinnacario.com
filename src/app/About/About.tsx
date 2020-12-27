@@ -1,3 +1,4 @@
+import React from 'react';
 import { motion } from 'framer-motion';
 import { CustomButton } from '../../components';
 import { slideDownFrameAnim, slideLeft, slideRight } from '../../components/animation/slide';

@@ -1,3 +1,4 @@
+import React from 'react';
 import { Suspense, useCallback, useMemo, useRef } from 'react';
 import { Canvas, useFrame } from 'react-three-fiber';
 

@@ -1,3 +1,4 @@
+import React from 'react';
 import { CustomButton } from '../../components';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';

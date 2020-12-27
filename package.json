@@ -50,6 +50,7 @@
     ]
   },
   "devDependencies": {
+    "@types/react-router-dom": "^5.1.6",
     "autoprefixer": "^10.1.0",
     "nodemon": "^2.0.6",
     "postcss": "^8.2.1",

@@ -1,11 +1,15 @@
+import React from 'react';
+
 enum Types {
   Submit = 'submit',
 }
+
 interface ButtonProps {
   submit?: boolean;
   handleClick?: (e: boolean) => void;
   children: any;
 }
+
 export default function CustomButton({ submit, handleClick, children }: ButtonProps) {
   function onClick() {
     if (!handleClick) return;
