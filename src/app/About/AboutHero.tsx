@@ -88,7 +88,7 @@ export default function AboutHero() {
       >
         <ambientLight intensity={1} />
         <pointLight position={[100, 100, 100]} intensity={2.2} />
-        <pointLight position={[-100, -100, -100]} intensity={5} color="red" />
+        <pointLight position={[-100, -100, -100]} intensity={5} color="gray" />
         <Swarm mouse={mouse} count={150} />
         <Suspense fallback={null}>
           <Effects />

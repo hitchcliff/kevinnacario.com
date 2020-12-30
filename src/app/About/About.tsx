@@ -21,7 +21,7 @@ export default function About() {
             <CustomButton>Scout</CustomButton>
           </motion.div>
         </motion.div>
-        <motion.div className="absolute z-0 md:w-full" style={{ height: '80vh' }} {...slideLeft}>
+        <motion.div className="absolute z-0 md:w-full" style={{ height: '80vh' }} {...slideDownFrameAnim}>
           <AboutHero />
         </motion.div>
       </motion.div>

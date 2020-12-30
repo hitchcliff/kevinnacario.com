@@ -1,8 +1,10 @@
+import { motion } from 'framer-motion';
 import React from 'react';
+import { slideRight } from '../../components/animation/slide';
 
 export default function Description() {
   return (
-    <div className="flex flex-row gap-12 flex-wrap bg-gray-100 py-24 h-1/2  px-10 w-full lg:px-56">
+    <motion.div className="flex flex-row gap-12 flex-wrap bg-gray-100 py-24 h-1/2  px-10 w-full lg:px-56" {...slideRight}>
       <div>
         <h2>Tags</h2>
         <ul className="flex flex-row flex-nowrap gap-2">
@@ -24,6 +26,6 @@ export default function Description() {
           <p>Project built for Technology Testing Purposes</p>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
