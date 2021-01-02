@@ -49,6 +49,7 @@ export default function About() {
                   Github
                 </a>
               </div>
+              <p className="mt-5 italic">Try checking my other Fullstack applications as well within my Github repository.</p>
             </div>
           </Popup>
         )}
