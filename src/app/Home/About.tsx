@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { CustomButton, Popup } from '../../components';
 import { AnimatePresence, motion } from 'framer-motion';
 import { slideDownFrameAnim, slideUpV2FrameAnim } from '../../components/animation/slide';
+import { RoutePattern } from '../../routes/RoutePattern';
 
 export default function About() {
   const [clicked, setClicked] = useState(false);
@@ -30,7 +31,28 @@ export default function About() {
           <p className="leading-loose">+63 9268339430</p>
         </div>
       </motion.div>
-      <AnimatePresence exitBeforeEnter>{clicked && <Popup sensor={setClicked} />}</AnimatePresence>
+      <AnimatePresence exitBeforeEnter>
+        {clicked && (
+          <Popup sensor={setClicked}>
+            <div className="w-full h-full bg-white">
+              <iframe
+                width="100%"
+                height="100%"
+                src="https://www.youtube-nocookie.com/embed/vma2YnRHvNA"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+              <div className="mt-10 flex flex-row items-center flex-wrap gap-5">
+                <CustomButton link={RoutePattern.Portfolio}>Other projects</CustomButton>
+                <a className="underline text-md text-gray-600" href="https://github.com/hitchcliff/dashboard-laravel">
+                  Github
+                </a>
+              </div>
+            </div>
+          </Popup>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
