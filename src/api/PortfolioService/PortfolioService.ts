@@ -1,6 +1,7 @@
 import { Client } from '..';
 import { PortfolioTypes } from '../../app/SinglePortfolio/types';
 import { addPortfolioItems } from '../../features/Portfolio/portfolio.slice';
+import Store from '../../Store';
 
 export default class PortfolioService {
   async getPortfolioItems() {
@@ -25,7 +26,6 @@ export default class PortfolioService {
       };
     });
 
-    console.log(formattedData);
-    addPortfolioItems(formattedData);
+    Store.dispatch(addPortfolioItems(formattedData));
   }
 }

@@ -6,9 +6,7 @@ export const portfolioAdapter = createEntityAdapter<PortfolioTypes>({
 });
 
 const initialState = {
-  items: portfolioAdapter.getInitialState({
-    loading: false,
-  }),
+  items: portfolioAdapter.getInitialState(),
 };
 
 export const portfolioSlice = createSlice({

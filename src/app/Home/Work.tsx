@@ -9,7 +9,6 @@ import Image5 from '../../assets/images/react-best-tourist.jpg';
 import Image6 from '../../assets/images/resort-ui.jpg';
 import { motion } from 'framer-motion';
 import { slideUpStagger, stagger } from '../../components/animation/stagger';
-import usePortfolioService from '../Hooks/usePortfolioService';
 
 const Portfolio = [Image1, Image2, Image3, Image4, Image5, Image6];
 
@@ -24,8 +23,6 @@ const hover = {
 };
 
 export default function Work() {
-  const { getPortfolioItems } = usePortfolioService();
-  getPortfolioItems();
   return (
     <motion.div initial="initial" animate="animate" exit="exit">
       <motion.div variants={stagger} className="grid gap-5 w-3/4 m-auto mt-16 md:grid-cols-3">

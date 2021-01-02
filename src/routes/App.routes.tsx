@@ -1,11 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { AnimatePresence } from 'framer-motion';
 import { Route, Switch, useLocation } from 'react-router-dom';
 import { RoutePattern } from './RoutePattern';
 import { Home, About, Portfolio, SinglePortfolio } from '../app/index';
+import usePortfolioService from '../app/Hooks/usePortfolioService';
 
 export default function AppRoutes() {
   const location = useLocation();
+  const { getPortfolioItems } = usePortfolioService();
+
+  useEffect(() => {
+    getPortfolioItems();
+  }, []);
 
   return (
     <AnimatePresence exitBeforeEnter>
