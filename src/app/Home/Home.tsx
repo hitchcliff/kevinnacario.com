@@ -10,7 +10,7 @@ import { slideUpV2FrameAnim } from '../../components/animation/slide';
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen relative">
-      <div className="flex flex-col px-10 py-10 md:px-56">
+      <div className="flex flex-col px-10 py-24 md:px-56">
         <motion.h1 {...slideUpV2FrameAnim} className="m-auto font-light leading-snug  w-full text-lg text-center md:text-2xl lg:w-1/2">
           I'm Kevin Nacario, a Frontend Developer and Jr. Fullstack Developer from Philippines. I build frontend applications and has 2+ years of
           coding experience in web development.
