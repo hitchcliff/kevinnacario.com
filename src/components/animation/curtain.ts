@@ -55,7 +55,6 @@ export const curtainFromTopToBottom = {
 
 export const popupFrameAnimation = {
   initial: {
-    width: 0,
     height: 0,
     opacity: 0,
   },
@@ -65,7 +64,6 @@ export const popupFrameAnimation = {
     opacity: 1,
   },
   exit: {
-    width: 0,
     height: 0,
     opacity: 0,
   },
