@@ -12082,6 +12082,14 @@ h2 {
   height: 70vh;
 }
 
+.h-eight {
+  height: 80vh;
+}
+
+.h-nine {
+  height: 90vh;
+}
+
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
@@ -41270,6 +41278,14 @@ h2 {
     height: 70vh;
   }
 
+  .sm\:h-eight {
+    height: 80vh;
+  }
+
+  .sm\:h-nine {
+    height: 90vh;
+  }
+
   .sm\:text-xs {
     font-size: 0.75rem;
     line-height: 1rem;
@@ -70413,6 +70429,14 @@ h2 {
 
   .md\:h-seven {
     height: 70vh;
+  }
+
+  .md\:h-eight {
+    height: 80vh;
+  }
+
+  .md\:h-nine {
+    height: 90vh;
   }
 
   .md\:text-xs {
@@ -99560,6 +99584,14 @@ h2 {
     height: 70vh;
   }
 
+  .lg\:h-eight {
+    height: 80vh;
+  }
+
+  .lg\:h-nine {
+    height: 90vh;
+  }
+
   .lg\:text-xs {
     font-size: 0.75rem;
     line-height: 1rem;
@@ -128705,6 +128737,14 @@ h2 {
     height: 70vh;
   }
 
+  .xl\:h-eight {
+    height: 80vh;
+  }
+
+  .xl\:h-nine {
+    height: 90vh;
+  }
+
   .xl\:text-xs {
     font-size: 0.75rem;
     line-height: 1rem;
@@ -157848,6 +157888,14 @@ h2 {
 
   .\32xl\:h-seven {
     height: 70vh;
+  }
+
+  .\32xl\:h-eight {
+    height: 80vh;
+  }
+
+  .\32xl\:h-nine {
+    height: 90vh;
   }
 
   .\32xl\:text-xs {

@@ -24,7 +24,7 @@ export default function SinglePortfolio({ match }: SinglePortfolioProps) {
 
   return (
     <div className="flex flex-col">
-      <div className="flex flex-wrap items-center gap-10 flex-col-reverse pb-10 lg:pb-0 md:pt-24 lg:flex-row lg:px-56 lg:flex-nowrap bg-white">
+      <div className="flex flex-wrap items-center gap-10 flex-col-reverse py-24 h-nine lg:flex-row lg:px-56 lg:flex-nowrap bg-white">
         <div className="w-full mr-auto px-10 md:w-1/2 lg:px-0">
           <motion.h1 className="text-5xl font-light" {...slideDownFrameAnim}>
             {portfolio.title}
@@ -39,10 +39,9 @@ export default function SinglePortfolio({ match }: SinglePortfolioProps) {
           <motion.img className="h-full w-full object-cover" src={portfolio.mockup} alt="" {...slideUpV2FrameAnim} />
         </div>
       </div>
-      <Description tags={portfolio.tags} date_finished={portfolio.date_finished} overview={portfolio.overview} />
+      <CodeExplanation video_url={portfolio.video_url} github_url={portfolio.github_url} concept_description={portfolio.concept_description} />
       <Screens mobile={portfolio.images[0]} tablet={portfolio.images[1]} desktop={portfolio.images[2]} />
-      <Concept concept_description={portfolio.concept_description} />
-      <CodeExplanation video_description={portfolio.video_description} video_url={portfolio.video_url} github_url={portfolio.github_url} />
+      <Description tags={portfolio.tags} date_finished={portfolio.date_finished} overview={portfolio.overview} />
     </div>
   );
 }

@@ -13,6 +13,8 @@ module.exports = {
           five: '50vh',   
           six: "60vh", 
           seven: '70vh',
+          eight: '80vh',
+          nine: '90vh',
       }
     },
   },

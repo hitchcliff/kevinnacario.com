@@ -8,7 +8,7 @@ interface ConceptProps {
 
 export default function Concept({ concept_description }: ConceptProps) {
   return (
-    <motion.div className="mt-10 px-10 pt-24 md:w-2/3 lg:px-56 lg:mx-auto" {...slideUpV2FrameAnim}>
+    <motion.div className="mt-10 px-10 py-24 md:w-2/3 lg:px-56 lg:mx-auto" {...slideUpV2FrameAnim}>
       <Heading num="1">Concept</Heading>
       <p className="mt-10">{concept_description}</p>
     </motion.div>
