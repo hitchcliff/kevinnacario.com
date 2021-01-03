@@ -15,7 +15,7 @@ export default function CodeExplanation({ video_description, video_url, github_u
     <div className="flex flex-row flex-wrap items-center gap-10 pt-24 lg:gap-20 lg:flex-nowrap ">
       <motion.div className="w-full h-full lg:w-1/2" {...slideUpV2FrameAnim}>
         <iframe
-          className="w-full h-four md:h-seven"
+          className="w-full h-four md:h-five"
           title="single portfolio"
           src={video_url}
           frameBorder="0"

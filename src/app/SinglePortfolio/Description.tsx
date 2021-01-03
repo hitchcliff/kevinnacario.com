@@ -13,7 +13,7 @@ export default function Description({ tags, date_finished, overview }: Descripti
   const today = new Date(date_finished);
 
   return (
-    <motion.div className="mt-24 flex flex-row gap-12 flex-wrap bg-gray-100 py-24 h-1/2  px-10 w-full lg:px-56" {...slideRight}>
+    <motion.div className="mt-0 flex flex-row gap-12 flex-wrap bg-gray-100 py-24 h-1/2  px-10 w-full md:mt-24 lg:px-56" {...slideRight}>
       <div>
         <h2>Tags</h2>
         <ul className="flex flex-row flex-nowrap gap-2">
