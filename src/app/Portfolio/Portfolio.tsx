@@ -7,8 +7,15 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { TweenLite, Power3 } from 'gsap';
 import { curtainFromTopToBottom } from '../../components/animation/curtain';
 import { slideDownFrameAnim, slideUpFrameAnim } from '../../components/animation/slide';
+import { useSelector } from 'react-redux';
+import { selectAllPortfolioSelector } from '../../features/Portfolio/portfolio.selector';
+import { RoutePattern } from '../../routes/RoutePattern';
 
 export default function Portfolio() {
+  const portfolio = useSelector(selectAllPortfolioSelector);
+  const license = process.env.REACT_APP_FULLPAGE_SECRET;
+
+  if (!portfolio.length) return <>Loading...</>;
   return (
     <motion.div initial="initial" animate="animate" exit="exit">
       <AnimatePresence initial exitBeforeEnter>
@@ -16,12 +23,11 @@ export default function Portfolio() {
       </AnimatePresence>
       <div className="px-10 py-0 md:px-56">
         <ReactFullpage
+          licenseKey={license}
           scrollingSpeed={700}
           navigation
           navigationPosition="left"
-          navigationTooltips={['firstSlide', 'secondSlide']}
-          navigationTooltip
-          anchors={['firstPage', 'secondPage']}
+          anchors={['1', '2', '3', '4', '5', '6']}
           onLeave={(_: any, destination: any, __: any) => {
             const section = destination.item;
             const tags = section.querySelector('#tags');
@@ -72,28 +78,19 @@ export default function Portfolio() {
           render={() => {
             return (
               <ReactFullpage.Wrapper>
-                <motion.div {...slideUpFrameAnim} className="section">
-                  <Item
-                    tags={['UI,', 'UX']}
-                    title="Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, cumque?"
-                    more="!#"
-                    author_image={AuthorImage}
-                    author_name="Kevin Nacario"
-                    author_title="Developer"
-                    showcase={Image1}
-                  />
-                </motion.div>
-                <motion.div {...slideDownFrameAnim} className="section">
-                  <Item
-                    tags={['UI,', 'UX']}
-                    title="Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, cumque?"
-                    more="!#"
-                    author_image={AuthorImage}
-                    author_name="Kevin Nacario"
-                    author_title="Developer"
-                    showcase={Image1}
-                  />
-                </motion.div>
+                {portfolio.map((item) => (
+                  <motion.div {...slideUpFrameAnim} className="section" key={item.id}>
+                    <Item
+                      tags={item.tags}
+                      title={item.title}
+                      more={`${RoutePattern.Portfolio}/${item.slug}/${item.id}`}
+                      author_image={AuthorImage}
+                      author_name="Kevin Nacario"
+                      author_title="Developer"
+                      showcase={item.mockup}
+                    />
+                  </motion.div>
+                ))}
               </ReactFullpage.Wrapper>
             );
           }}

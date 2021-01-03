@@ -24,7 +24,7 @@ export default function SinglePortfolio({ match }: SinglePortfolioProps) {
   console.log(portfolio);
   return (
     <div className="flex flex-col">
-      <div className="flex flex-wrap items-center gap-10 flex-col-reverse pb-10 lg:pb-0 lg:flex-row lg:px-56 lg:flex-nowrap bg-white h-5/6">
+      <div className="flex flex-wrap items-center gap-10 flex-col-reverse pb-10 lg:pb-0 md:pt-24 lg:flex-row lg:px-56 lg:flex-nowrap bg-white">
         <div className="w-full mr-auto px-10 md:w-1/2 lg:px-0">
           <motion.h1 className="text-5xl font-light" {...slideDownFrameAnim}>
             {portfolio.title}

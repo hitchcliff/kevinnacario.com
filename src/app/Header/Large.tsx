@@ -19,7 +19,9 @@ export default function Large() {
         <Link to={RoutePattern.Portfolio}>Portfolio</Link>
       </ul>
       <div>
-        <CustomButton>Résumé</CustomButton>
+        <CustomButton>
+          <a href="!#">Résumé</a>
+        </CustomButton>
       </div>
     </div>
   );
