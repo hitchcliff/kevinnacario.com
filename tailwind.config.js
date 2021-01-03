@@ -7,6 +7,12 @@ module.exports = {
         green: {
           pale: '#26A69A',
         }
+      },
+      height: {
+          four: '40vh',
+          five: '50vh',   
+          six: "60vh", 
+          seven: '70vh',
       }
     },
   },

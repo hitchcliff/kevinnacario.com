@@ -41,8 +41,8 @@ export default function SinglePortfolio({ match }: SinglePortfolioProps) {
       </div>
       <Description tags={portfolio.tags} date_finished={portfolio.date_finished} overview={portfolio.overview} />
       <Screens mobile={portfolio.images[0]} tablet={portfolio.images[1]} desktop={portfolio.images[2]} />
-      <Concept />
-      <CodeExplanation />
+      <Concept concept_description={portfolio.concept_description} />
+      <CodeExplanation video_description={portfolio.video_description} video_url={portfolio.video_url} github_url={portfolio.github_url} />
     </div>
   );
 }

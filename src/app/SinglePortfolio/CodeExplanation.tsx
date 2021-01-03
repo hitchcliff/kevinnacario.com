@@ -4,23 +4,32 @@ import { CustomButton } from '../../components';
 import { slideDownFrameAnim, slideUpV2FrameAnim } from '../../components/animation/slide';
 import Heading from '../../components/Heading/Heading';
 
-export default function CodeExplanation() {
+interface CodeExplanationProps {
+  video_description: string;
+  video_url: string;
+  github_url: string;
+}
+
+export default function CodeExplanation({ video_description, video_url, github_url }: CodeExplanationProps) {
   return (
-    <div className="flex flex-row flex-wrap items-center gap-10 pt-0 pb-24 lg:pt-24 lg:gap-20 lg:flex-nowrap">
-      <motion.div className="w-full lg:w-1/2" {...slideUpV2FrameAnim}>
-        <video width="100%" height="100%" controls>
-          <source src="https://www.youtube.com/watch?v=jnLSYfObARA&list=PLGmxyVGSCDKvmLInHxJ9VdiwEb82Lxd2E" />
-        </video>
+    <div className="flex flex-row flex-wrap items-center gap-10 pt-24 lg:gap-20 lg:flex-nowrap ">
+      <motion.div className="w-full h-full lg:w-1/2" {...slideUpV2FrameAnim}>
+        <iframe
+          className="w-full h-four md:h-seven"
+          title="single portfolio"
+          src={video_url}
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        />
       </motion.div>
       <motion.div className="w-full pr-10 px-10 lg:px-0 lg:pr-56 lg:w-1/2 " {...slideDownFrameAnim}>
         <Heading num="2">Code explanation</Heading>
-        <p className="mt-10">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis tempora veniam illo vitae, quod aspernatur. Mollitia veritatis quia, fugiat
-          debitis alias voluptate magni quasi consequatur explicabo distinctio natus voluptatem expedita error velit soluta maiores sed officia quos
-          quae labore culpa delectus. Tempora ipsum atque veniam at rem nobis ut esse.
-        </p>
+        <p className="mt-10">{video_description}</p>
         <div className="mt-10">
-          <CustomButton>Source Code</CustomButton>
+          <CustomButton>
+            <a href={github_url}>Source Code</a>
+          </CustomButton>
         </div>
       </motion.div>
     </div>
