@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { CustomButton } from '../../components';
-import { slideDownFrameAnim, slideLeft, slideRight } from '../../components/animation/slide';
+import { slideDownFrameAnim, slideRight } from '../../components/animation/slide';
 import Skills from './Skills';
 import AboutHero from './AboutHero';
 import Me from './Me';

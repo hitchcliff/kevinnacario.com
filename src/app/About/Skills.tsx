@@ -4,7 +4,7 @@ import { useState } from 'react';
 import Heading from './Heading';
 import Techs from './Techs';
 import { Frontend, Backend, Principles, Others } from './Data';
-import { slideDownFrameAnim, slideLeft, slideUpFrameAnim, slideUpV2FrameAnim } from '../../components/animation/slide';
+import { slideDownFrameAnim, slideUpFrameAnim, slideUpV2FrameAnim } from '../../components/animation/slide';
 
 const svg = 'w-8 h-8 m-auto font-light text-gray-500';
 

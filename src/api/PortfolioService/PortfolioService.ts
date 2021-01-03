@@ -1,6 +1,7 @@
 import { Client } from '..';
 import { PortfolioTypes } from '../../app/SinglePortfolio/types';
 import { addPortfolioItems } from '../../features/Portfolio/portfolio.slice';
+import { sluggify } from '../../helpers/Sluggify';
 import Store from '../../Store';
 
 export default class PortfolioService {
@@ -13,12 +14,13 @@ export default class PortfolioService {
       return {
         id: item.sys.id,
         title: item.fields.title,
-        mockup: item.fields.mockup.fields.file,
+        slug: sluggify(item.fields.title),
+        mockup: item.fields.mockup.fields.file.url,
         website_url: item.fields.websiteUrl,
         tags: item.fields.tags,
         date_finished: item.fields.dateFinished,
         overview: item.fields.overview,
-        images: item.fields.images.map((item: any) => item.fields.file),
+        images: item.fields.images.map((item: any) => item.fields.file.url),
         concept_description: item.fields.conceptDescription,
         video_url: item.fields.videoUrl,
         video_description: item.fields.videoDescription,

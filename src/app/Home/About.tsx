@@ -36,6 +36,7 @@ export default function About() {
           <Popup sensor={setClicked}>
             <div className="w-full h-full bg-white">
               <iframe
+                title="ongoing projects"
                 width="100%"
                 height="100%"
                 src="https://www.youtube-nocookie.com/embed/vma2YnRHvNA"

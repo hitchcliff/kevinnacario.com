@@ -4,7 +4,6 @@ import { Canvas, useFrame } from 'react-three-fiber';
 
 import * as THREE from 'three';
 import { Object3D } from 'three/src/core/Object3D';
-import { Loading } from '../../components/index.js';
 import Effects from './assets/js/Effects.js';
 
 interface ISwarmProp {

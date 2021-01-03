@@ -1,12 +1,13 @@
 export interface PortfolioTypes {
   id: string;
   title: string;
-  mockup: File;
+  slug: string;
+  mockup: string;
   website_url: string;
   tags: string[];
   date_finished: Date;
   overview: string;
-  images: File[];
+  images: string[];
   concept_description: string;
   video_url: string;
   video_description: string;

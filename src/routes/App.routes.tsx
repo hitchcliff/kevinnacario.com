@@ -11,14 +11,14 @@ export default function AppRoutes() {
 
   useEffect(() => {
     getPortfolioItems();
-  }, []);
+  }, [getPortfolioItems]);
 
   return (
     <AnimatePresence exitBeforeEnter>
       <Switch location={location} key={location.pathname}>
         <Route exact path={RoutePattern.Home} component={Home} />
         <Route exact path={RoutePattern.Portfolio} component={Portfolio} />
-        <Route path={RoutePattern.Portfolio + '/:id'} component={SinglePortfolio} />
+        <Route path={RoutePattern.Portfolio + '/:slug/:id'} component={SinglePortfolio} />
         <Route exact path={RoutePattern.About} component={About} />
         <Route path="*">Page not found</Route>
       </Switch>
