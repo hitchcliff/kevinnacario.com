@@ -1,5 +1,5 @@
 import React from 'react';
-import { CustomButton } from '../../components';
+import { CustomButton, Loading } from '../../components';
 import SampleImage from '../../assets/images/lpado.jpg';
 import { motion } from 'framer-motion';
 import CodeExplanation from './CodeExplanation';
@@ -20,8 +20,8 @@ export default function SinglePortfolio({ match }: SinglePortfolioProps) {
   const id = match.params.id;
   const portfolio: PortfolioTypes | undefined = useSelector((state: RootState) => portfolioSelector.selectById(state, id));
 
-  if (!portfolio) return <>Page not found</>;
-  console.log(portfolio);
+  if (!portfolio) return <Loading />;
+
   return (
     <div className="flex flex-col">
       <div className="flex flex-wrap items-center gap-10 flex-col-reverse pb-10 lg:pb-0 md:pt-24 lg:flex-row lg:px-56 lg:flex-nowrap bg-white">

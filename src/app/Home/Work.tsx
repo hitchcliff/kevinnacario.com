@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import { slideUpStagger, stagger } from '../../components/animation/stagger';
 import { selectAllPortfolioSelector } from '../../features/Portfolio/portfolio.selector';
 import { useSelector } from 'react-redux';
+import { Loading } from '../../components';
 
 export const transition = {
   duration: 0.6,
@@ -18,6 +19,8 @@ const hover = {
 
 export default function Work() {
   const portfolio = useSelector(selectAllPortfolioSelector);
+
+  if (!portfolio) return <Loading />;
 
   return (
     <motion.div initial="initial" animate="animate" exit="exit">

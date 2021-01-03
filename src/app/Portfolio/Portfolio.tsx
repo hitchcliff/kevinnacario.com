@@ -10,12 +10,13 @@ import { slideDownFrameAnim, slideUpFrameAnim } from '../../components/animation
 import { useSelector } from 'react-redux';
 import { selectAllPortfolioSelector } from '../../features/Portfolio/portfolio.selector';
 import { RoutePattern } from '../../routes/RoutePattern';
+import { Loading } from '../../components';
 
 export default function Portfolio() {
   const portfolio = useSelector(selectAllPortfolioSelector);
   const license = process.env.REACT_APP_FULLPAGE_SECRET;
 
-  if (!portfolio.length) return <>Loading...</>;
+  if (!portfolio.length) return <Loading />;
   return (
     <motion.div initial="initial" animate="animate" exit="exit">
       <AnimatePresence initial exitBeforeEnter>
