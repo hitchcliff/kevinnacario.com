@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { slideUpV2FrameAnim } from '../../components/animation/slide';
+import { slideUpV2FrameAnim } from '../animation/slide';
 
 export default function Heading({ children, num }: any) {
   return (

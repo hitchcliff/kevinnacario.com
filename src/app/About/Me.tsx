@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { CustomButton } from '../../components';
 import { slideUpV2FrameAnim } from '../../components/animation/slide';
-import Heading from './Heading';
+import Heading from '../../components/Heading/Heading';
 
 export default function Me() {
   return (

@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import React from 'react';
 import { CustomButton } from '../../components';
 import { slideDownFrameAnim, slideUpV2FrameAnim } from '../../components/animation/slide';
+import Heading from '../../components/Heading/Heading';
 
 export default function CodeExplanation() {
   return (
@@ -12,7 +13,7 @@ export default function CodeExplanation() {
         </video>
       </motion.div>
       <motion.div className="w-full pr-10 px-10 lg:px-0 lg:pr-56 lg:w-1/2 " {...slideDownFrameAnim}>
-        <h2>Code explanation</h2>
+        <Heading num="2">Code explanation</Heading>
         <p className="mt-10">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis tempora veniam illo vitae, quod aspernatur. Mollitia veritatis quia, fugiat
           debitis alias voluptate magni quasi consequatur explicabo distinctio natus voluptatem expedita error velit soluta maiores sed officia quos

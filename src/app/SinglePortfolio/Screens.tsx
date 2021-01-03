@@ -11,9 +11,9 @@ interface ScreensProps {
 
 export default function Screens({ mobile, tablet, desktop }: ScreensProps) {
   return (
-    <div className="pb-24 pt-24">
+    <div className="pt-24">
       {/* desktop */}
-      <div className="hidden flex-row flex-wrap items-end sm:px-10 lg:px-56 gap-5 lg:flex-nowrap lg:flex" style={{ height: '60vh' }}>
+      <div className="hidden flex-row flex-wrap items-end sm:px-10 lg:px-56 gap-5 lg:flex-nowrap lg:flex" style={{ height: '40vh' }}>
         <motion.div className="w-1/2 h-3/4 bg-white shadow-xl z-0 overflow-x-hidden overflow-y-scroll vertical-scrollbar" {...slideUpV2FrameAnim}>
           <img className="object-cover" src={tablet} alt="sample.jpg" />
         </motion.div>
@@ -43,7 +43,6 @@ export default function Screens({ mobile, tablet, desktop }: ScreensProps) {
         </motion.div>
       </div>
       {/* end mobile */}
-      <Concept />
     </div>
   );
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { useState } from 'react';
-import Heading from './Heading';
+import Heading from '../../components/Heading/Heading';
 import Techs from './Techs';
 import { Frontend, Backend, Principles, Others } from './Data';
 import { slideDownFrameAnim, slideUpFrameAnim, slideUpV2FrameAnim } from '../../components/animation/slide';
