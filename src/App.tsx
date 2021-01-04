@@ -9,7 +9,6 @@ function App() {
   return (
     <Router>
       <Header />
-      <Loading />
       <Switch>
         <Route path="*" component={AppRoutes} />
       </Switch>
