@@ -19,7 +19,7 @@ export default function Item({ tags, title, more, author_image, author_title, au
         <div id="tags">
           <ul className="flex flex-row gap-2">
             {tags.map((item, idx) => (
-              <li key={idx}>{item}</li>
+              <li key={idx}>{idx === tags.length - 1 ? item : item + ', '}</li>
             ))}
           </ul>
         </div>
