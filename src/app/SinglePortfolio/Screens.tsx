@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { slideDownFrameAnim, slideUpV2FrameAnim } from '../../components/animation/slide';
-import Concept from './Concept';
 
 interface ScreensProps {
   mobile: string;

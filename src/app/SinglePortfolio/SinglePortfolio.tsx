@@ -1,6 +1,5 @@
 import React from 'react';
 import { CustomButton, Loading } from '../../components';
-import SampleImage from '../../assets/images/lpado.jpg';
 import { motion } from 'framer-motion';
 import CodeExplanation from './CodeExplanation';
 import Screens from './Screens';
@@ -10,7 +9,6 @@ import { useSelector } from 'react-redux';
 import { RootState } from '../../Store';
 import { portfolioSelector } from '../../features/Portfolio/portfolio.selector';
 import { PortfolioTypes } from './types';
-import Concept from './Concept';
 
 interface SinglePortfolioProps {
   match: { params: { id: string } };

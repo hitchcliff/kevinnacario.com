@@ -1,12 +1,11 @@
 import React from 'react';
 import AuthorImage from './assets/images/kevin.jpg';
-import Image1 from '../../assets/images/real-estate.jpg';
 import Item from './Item';
 import ReactFullpage from '@fullpage/react-fullpage';
 import { AnimatePresence, motion } from 'framer-motion';
 import { TweenLite, Power3 } from 'gsap';
 import { curtainFromTopToBottom } from '../../components/animation/curtain';
-import { slideDownFrameAnim, slideUpFrameAnim } from '../../components/animation/slide';
+import { slideUpFrameAnim } from '../../components/animation/slide';
 import { useSelector } from 'react-redux';
 import { selectAllPortfolioSelector } from '../../features/Portfolio/portfolio.selector';
 import { RoutePattern } from '../../routes/RoutePattern';
