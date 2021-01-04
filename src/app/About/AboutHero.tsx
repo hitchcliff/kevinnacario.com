@@ -63,7 +63,7 @@ function Swarm({ count, mouse }: ISwarmProp) {
 
   return (
     <>
-      <instancedMesh ref={mesh} args={[null, null, count]}>
+      <instancedMesh ref={mesh} args={[new THREE.BufferGeometry(), [], count]}>
         <sphereBufferGeometry attach="geometry" args={[1, 32, 32]} />
         <meshPhongMaterial attach="material" color="white" />
       </instancedMesh>
@@ -88,6 +88,7 @@ export default function AboutHero() {
         <ambientLight intensity={1} />
         <pointLight position={[100, 100, 100]} intensity={2.2} />
         <pointLight position={[-100, -100, -100]} intensity={5} color="gray" />
+        <boxBufferGeometry />
         <Swarm mouse={mouse} count={150} />
         <Suspense fallback={null}>
           <Effects />
