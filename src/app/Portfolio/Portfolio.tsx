@@ -19,7 +19,7 @@ export default function Portfolio() {
   return (
     <motion.div initial="initial" animate="animate" exit="exit">
       <AnimatePresence initial exitBeforeEnter>
-        <motion.div {...curtainFromTopToBottom} className="fixed w-full h-full z-20 bg-gray-100" />
+        <motion.div {...curtainFromTopToBottom} className="fixed w-full h-full z-20 bg-white" />
       </AnimatePresence>
       <div className="px-10 py-0 md:px-56">
         <ReactFullpage
