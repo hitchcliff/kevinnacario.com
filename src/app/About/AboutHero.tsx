@@ -63,7 +63,7 @@ function Swarm({ count, mouse }: ISwarmProp) {
 
   return (
     <>
-      <instancedMesh ref={mesh} args={[new THREE.BufferGeometry(), [], count]}>
+      <instancedMesh ref={mesh} args={[null, null, count]}>
         <sphereBufferGeometry attach="geometry" args={[1, 32, 32]} />
         <meshPhongMaterial attach="material" color="white" />
       </instancedMesh>
