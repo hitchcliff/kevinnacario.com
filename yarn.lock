@@ -10292,6 +10292,11 @@ react-merge-refs@^1.1.0:
   resolved "https://registry.yarnpkg.com/react-merge-refs/-/react-merge-refs-1.1.0.tgz#73d88b892c6c68cbb7a66e0800faa374f4c38b06"
   integrity sha512-alTKsjEL0dKH/ru1Iyn7vliS2QRcBp9zZPGoWxUOvRGWPUYgjo+V01is7p04It6KhgrzhJGnIj9GgX8W4bZoCQ==
 
+react-preloader@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/react-preloader/-/react-preloader-1.2.0.tgz#c26936050fcf536685bf48a42c3633c0f24706f0"
+  integrity sha1-wmk2BQ/PU2aFv0ikLDYzwPJHBvA=
+
 react-reconciler@0.26.1:
   version "0.26.1"
   resolved "https://registry.yarnpkg.com/react-reconciler/-/react-reconciler-0.26.1.tgz#860952dd359fd870f94895c254271e3a9de3b2d6"

@@ -6,24 +6,9 @@ import * as THREE from 'three';
 import { Object3D } from 'three/src/core/Object3D';
 import Effects from './assets/js/Effects.js';
 
-interface ISwarmProp {
-  mouse: React.MutableRefObject<number[]>;
-  count: number;
-}
 
-interface Particle {
-  t: number;
-  factor: number;
-  speed: number;
-  xFactor: number;
-  yFactor: number;
-  zFactor: number;
-  mx: number;
-  my: number;
-}
-
-function Swarm({ count, mouse }: ISwarmProp) {
-  const mesh: any = useRef();
+function Swarm({ count, mouse }) {
+  const mesh = useRef();
   const dummy = useMemo(() => new Object3D(), []);
 
   const particles = useMemo(() => {
@@ -41,7 +26,7 @@ function Swarm({ count, mouse }: ISwarmProp) {
   }, [count]);
 
   useFrame(() => {
-    particles.forEach((particle: Particle, i) => {
+    particles.forEach((particle, i) => {
       let { t, factor, speed, xFactor, yFactor, zFactor } = particle;
       t = particle.t += speed / 2;
       const a = Math.cos(t) + Math.sin(t * 1) / 10;
@@ -79,7 +64,7 @@ export default function AboutHero() {
       <Canvas
         gl={{ alpha: false, antialias: false, logarithmicDepthBuffer: true }}
         camera={{ fov: 60, position: [0, 0, 70] }}
-        onCreated={({ gl }: any) => {
+        onCreated={({ gl }) => {
           gl.setClearColor('white');
           gl.toneMapping = THREE.ACESFilmicToneMapping;
           gl.outputEncoding = THREE.sRGBEncoding;

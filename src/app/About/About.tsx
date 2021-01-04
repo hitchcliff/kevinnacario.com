@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { CustomButton } from '../../components';
 import { slideDownFrameAnim, slideRight } from '../../components/animation/slide';
 import Skills from './Skills';
-import AboutHero from './AboutHero';
+import AboutHero from './AboutHero.jsx';
 import Me from './Me';
 
 export default function About() {

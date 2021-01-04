@@ -4,3 +4,4 @@ declare module '*.mp3' {
   export default src;
 }
 declare module '@fullpage/react-fullpage';
+declare module 'react-preloader';
