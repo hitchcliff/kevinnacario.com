@@ -1,4 +1,9 @@
 import React from 'react';
+import './style.css';
 export default function Loading() {
-  return <div>Loading...</div>;
+  return (
+    <div className="loading-container">
+      <div className="circle" />
+    </div>
+  );
 }
