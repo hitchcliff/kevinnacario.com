@@ -1,6 +1,6 @@
 import { Client } from '..';
 import { PortfolioTypes } from '../../app/SinglePortfolio/types';
-import { addPortfolioItems } from '../../features/Portfolio/portfolio.slice';
+import { addPortfolioId, addPortfolioItems } from '../../features/Portfolio/portfolio.slice';
 import { sluggify } from '../../helpers/Sluggify';
 import Store from '../../Store';
 
@@ -30,4 +30,10 @@ export default class PortfolioService {
 
     Store.dispatch(addPortfolioItems(formattedData));
   }
+
+  selectPortfolioId(id: string) {
+    Store.dispatch(addPortfolioId(id));
+  }
+
+  selectPortfolioItem() {}
 }

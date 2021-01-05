@@ -6,6 +6,7 @@ import { slideUpStagger, stagger } from '../../components/animation/stagger';
 import { selectAllPortfolioSelector } from '../../features/Portfolio/portfolio.selector';
 import { useSelector } from 'react-redux';
 import { Loading } from '../../components';
+import usePortfolioService from '../Hooks/usePortfolioService';
 
 export const transition = {
   duration: 0.6,
@@ -19,6 +20,7 @@ const hover = {
 
 export default function Work() {
   const portfolio = useSelector(selectAllPortfolioSelector);
+  const { selectPortfolioId } = usePortfolioService();
 
   if (!portfolio) return <Loading />;
 
@@ -28,8 +30,16 @@ export default function Work() {
         {portfolio.map((item) => (
           <motion.div variants={slideUpStagger} key={item.id}>
             <div className="overflow-hidden">
-              <Link to={`${RoutePattern.Portfolio}/${item.slug}/${item.id}`}>
-                <motion.img {...hover} className="w-full h-80 object-cover" src={item.mockup} alt={item.title} />
+              <Link
+                to={`${RoutePattern.Portfolio}/${item.slug}/${item.id}`}
+                onClick={() => selectPortfolioId(item.id)}
+              >
+                <motion.img
+                  {...hover}
+                  className="w-full h-80 object-cover"
+                  src={item.mockup}
+                  alt={item.title}
+                />
               </Link>
             </div>
           </motion.div>

@@ -7,6 +7,7 @@ export const portfolioAdapter = createEntityAdapter<PortfolioTypes>({
 
 const initialState = {
   items: portfolioAdapter.getInitialState(),
+  portfolioId: '',
 };
 
 export const portfolioSlice = createSlice({
@@ -16,7 +17,10 @@ export const portfolioSlice = createSlice({
     addPortfolioItems: (state, { payload }: PayloadAction<PortfolioTypes[]>) => {
       portfolioAdapter.addMany(state.items, payload);
     },
+    addPortfolioId: (state, { payload }: PayloadAction<string>) => {
+      state.portfolioId = payload;
+    },
   },
 });
 
-export const { addPortfolioItems } = portfolioSlice.actions;
+export const { addPortfolioItems, addPortfolioId } = portfolioSlice.actions;

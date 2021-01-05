@@ -16,9 +16,12 @@ interface SinglePortfolioProps {
 
 export default function SinglePortfolio({ match }: SinglePortfolioProps) {
   const id = match.params.id;
-  const portfolio: PortfolioTypes | undefined = useSelector((state: RootState) => portfolioSelector.selectById(state, id));
+  const portfolio: PortfolioTypes | undefined = useSelector((state: RootState) =>
+    portfolioSelector.selectById(state, id),
+  );
 
   if (!portfolio) return <Loading />;
+  console.log(portfolio);
 
   return (
     <div className="flex flex-col">
@@ -34,12 +37,29 @@ export default function SinglePortfolio({ match }: SinglePortfolioProps) {
           </motion.div>
         </div>
         <div className="w-full h-full">
-          <motion.img className="h-full w-full object-cover" src={portfolio.mockup} alt="" {...slideUpV2FrameAnim} />
+          <motion.img
+            className="h-full w-full object-cover"
+            src={portfolio.mockup}
+            alt=""
+            {...slideUpV2FrameAnim}
+          />
         </div>
       </div>
-      <CodeExplanation video_url={portfolio.video_url} github_url={portfolio.github_url} concept_description={portfolio.concept_description} />
-      <Screens mobile={portfolio.images[0]} tablet={portfolio.images[1]} desktop={portfolio.images[2]} />
-      <Description tags={portfolio.tags} date_finished={portfolio.date_finished} overview={portfolio.overview} />
+      <CodeExplanation
+        video_url={portfolio.video_url}
+        github_url={portfolio.github_url}
+        concept_description={portfolio.concept_description}
+      />
+      <Screens
+        mobile={portfolio.images[0]}
+        tablet={portfolio.images[1]}
+        desktop={portfolio.images[2]}
+      />
+      <Description
+        tags={portfolio.tags}
+        date_finished={portfolio.date_finished}
+        overview={portfolio.overview}
+      />
     </div>
   );
 }
