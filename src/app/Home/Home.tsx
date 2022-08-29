@@ -16,13 +16,13 @@ export default function Home() {
           className="m-auto font-light leading-snug  w-full text-lg text-center md:text-2xl lg:w-1/2"
         >
           I'm Kevin Nacario, a Frontend Developer and Jr. Fullstack Developer from Philippines. I
-          build frontend applications and has 2+ years of coding experience in web development.
+          build frontend applications and has 3+ years of coding experience in web development.
         </motion.h1>
         <motion.div {...slideUpV2FrameAnim} className="m-auto p-10 flex flex-row items-center">
           <Link to={RoutePattern.Portfolio}>
-            <p className="inline-block focus">See my works</p>
+            <p className="inline-block focus underline">See my works</p>
           </Link>
-          <AudioIntro />
+          {/* <AudioIntro /> */}
         </motion.div>
       </div>
       <Work />
