@@ -12,9 +12,20 @@ interface CardProps {
   showcase: string;
 }
 
-export default function Item({ tags, title, more, author_image, author_title, author_name, showcase }: CardProps) {
+export default function Item({
+  tags,
+  title,
+  more,
+  author_image,
+  author_title,
+  author_name,
+  showcase,
+}: CardProps) {
   return (
-    <div className="flex flex-row flex-wrap items-center h-full lg:flex-nowrap" style={{ marginTop: '-10vh' }}>
+    <div
+      className="flex flex-row flex-wrap items-center h-full lg:flex-nowrap"
+      style={{ marginTop: '-10vh' }}
+    >
       <div className="w-1/2 h-auto flex flex-col">
         <div id="tags">
           <ul className="flex flex-row gap-2">
@@ -36,7 +47,7 @@ export default function Item({ tags, title, more, author_image, author_title, au
             <img src={author_image} alt="Kevin Nacario" />
           </div>
           <div>
-            <span className="font-light leading-3">{author_title}</span>
+            <span className="font-light leading-3">Software Developer</span>
             <p className="font-medium text-sm leading-3">{author_name}</p>
           </div>
         </div>

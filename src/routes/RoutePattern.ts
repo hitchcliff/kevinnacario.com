@@ -1,5 +1,7 @@
 export enum RoutePattern {
-  Home = "/",
-  About = "/about",
-  Portfolio = "/portfolio",
+  Home = '/',
+  About = '/about',
+  Portfolio = '/portfolio',
+  Skills = '/skills',
+  Experience = '/experience',
 }

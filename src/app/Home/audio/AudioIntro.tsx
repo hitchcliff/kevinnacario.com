@@ -1,9 +1,10 @@
 import { motion } from 'framer-motion';
 import React, { useEffect, useRef, useState } from 'react';
-import { transition } from '../Work';
+import { transition } from '../Fullstack';
 import Audio1 from '../assets/audio/Toto.mp3';
 
-const svg = 'w-10 h-10 ml-5 inline-block cursor-pointer outline-none hover:text-gray-600  transition-all';
+const svg =
+  'w-10 h-10 ml-5 inline-block cursor-pointer outline-none hover:text-gray-600  transition-all';
 
 const animate = {
   whileHover: {
@@ -45,7 +46,12 @@ export default function AudioIntro() {
             viewBox="0 0 24 24"
             stroke="currentColor"
           >
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 9v6m4-6v6m7-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M10 9v6m4-6v6m7-3a9 9 0 11-18 0 9 9 0 0118 0z"
+            />
           </motion.svg>
         </button>
       ) : (
@@ -65,7 +71,12 @@ export default function AudioIntro() {
               strokeWidth="2"
               d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"
             />
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+            />
           </motion.svg>
         </button>
       )}
@@ -78,7 +89,13 @@ export default function AudioIntro() {
       />
       {play && (
         <div className="absolute ml-20">
-          <input className="bg-gray-300" type="range" onChange={handleProgress} value={dur ? (currentTime * 100) / dur : 0} name="progressBar" />
+          <input
+            className="bg-gray-300"
+            type="range"
+            onChange={handleProgress}
+            value={dur ? (currentTime * 100) / dur : 0}
+            name="progressBar"
+          />
         </div>
       )}
     </div>

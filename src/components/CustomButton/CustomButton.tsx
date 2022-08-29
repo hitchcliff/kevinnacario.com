@@ -19,7 +19,11 @@ export default function CustomButton({ submit, handleClick, children, link }: Bu
   }
 
   return (
-    <button onClick={onClick} type={submit ? Types.Submit : undefined} className="block py-2 px-4 btn">
+    <button
+      onClick={onClick}
+      type={submit ? Types.Submit : undefined}
+      className="block py-2 px-4 btn gradient"
+    >
       {link ? <Link to={link}>{children}</Link> : children}
     </button>
   );

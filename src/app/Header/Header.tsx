@@ -6,8 +6,8 @@ import { slideDownFrameAnim } from '../../components/animation/slide';
 
 export default function Header() {
   return (
-    <motion.nav {...slideDownFrameAnim} className="px-10 shadow-sm py-5 sticky top-0 bg-white z-20 lg:px-56">
-      <Large />
+    <motion.nav {...slideDownFrameAnim} className="py-5 fixed w-full top-0 z-20 px-5">
+      {/* <Large /> */}
       <Small />
     </motion.nav>
   );
